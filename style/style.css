@@ -1,0 +1,107 @@
+/* open-sans-600 - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/open-sans-v17-latin_cyrillic-600.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+       url('../fonts/open-sans-v17-latin_cyrillic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v17-latin_cyrillic-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v17-latin_cyrillic-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v17-latin_cyrillic-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v17-latin_cyrillic-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+/* fira-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/fira-sans-v10-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+  src: local('Fira Sans Bold'), local('FiraSans-Bold'),
+       url('../fonts/fira-sans-v10-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-sans-v10-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-sans-v10-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-sans-v10-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-sans-v10-latin_cyrillic-700.svg#FiraSans') format('svg'); /* Legacy iOS */
+}
+
+html {
+  height: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	margin: 0 auto;
+	max-width: 1200px;
+	background: url('../img/bg.png');
+  height: 100%;
+}
+
+.hello {
+	position: relative;
+	width: 300px;
+	background-color: white;
+	border-radius: 8px;
+	border-left: 1px solid #e0e0e1;
+	border-bottom: 1px solid #c7c7c8;
+	border-right: 1px solid #e0e0e1;
+	box-shadow: 0 1px 0 0px #e0e0e1;
+}
+
+.photo-wrapper {
+	width: 140px;
+	height: 140px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #bdbdbd;
+  top: -71px;
+  left: 79px;
+}
+
+.name {
+	text-align: center;
+	font-family: 'Open Sans';
+	font-size: 21px;
+  word-wrap: break-word;
+}
+
+.name_margin {
+  margin-top: 83px;
+}
+
+.link-wrapper {
+  display: flex;
+  justify-content: center;
+	width: 100%;
+	background-color: #33c1e3;
+	border-radius: 0 0 7px 7px;
+  margin-top: 15px;
+}
+
+.link {
+  display: block;
+	font-family: 'Fira Sans';
+  color: white;
+  max-width: 100%;
+  padding: 10px 13px;
+  text-decoration: none;
+  font-size: 14px;
+  border: 2px solid white;
+  border-radius: 20px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.link_margin {
+  margin: 18px 0;
+}
+
+.link:hover {
+  background-color: white;
+  color: #33c1e3;
+}
+
