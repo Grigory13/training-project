@@ -1,0 +1,25 @@
+
+nav.menu
+    ul.menu__list.list-menu
+        case nameSection
+            when 'about'
+                li.list-menu__item.item-active
+                    a.list-menu__link.link-active.list-menu__link_icon-about.icon-about_active(href="about.html") Обо мне
+                li.list-menu__item
+                    a.list-menu__link.list-menu__link_icon-career(href="career.html") Карьерный путь
+                li.list-menu__item
+                    a.list-menu__link.list-menu__link_icon-portfolio(href="portfolio.html") Портфолио
+            when 'career'
+                li.list-menu__item
+                    a.list-menu__link.list-menu__link_icon-about(href="about.html") Обо мне
+                li.list-menu__item.item-active
+                    a.list-menu__link.link-active.list-menu__link_icon-career.icon-career_active(href="career.html") Карьерный путь
+                li.list-menu__item
+                    a.list-menu__link.list-menu__link_icon-portfolio(href="portfolio.html") Портфолио
+            when 'portfolio'
+                li.list-menu__item
+                    a.list-menu__link.list-menu__link_icon-about(href="about.html") Обо мне
+                li.list-menu__item
+                    a.list-menu__link.list-menu__link_icon-career(href="career.html") Карьерный путь
+                li.list-menu__item.item-active
+                    a.list-menu__link.link-active.list-menu__link_icon-portfolio.icon-portfolio_active(href="portfolio.html") Портфолио

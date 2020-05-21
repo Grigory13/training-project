@@ -1,0 +1,27 @@
+block variables
+
+doctype html
+html(lang="ru")
+    head
+        title= pageTitle
+        meta(charset="utf-8")
+        link(rel="stylesheet" href="styles/about.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body
+        include ../modules/header
+        main.main
+            .fixed-container
+                .main-wrapper
+                    include ../modules/nav
+                    case nameSection
+                        when 'about'
+                            include ../modules/section-about
+                        when 'career'
+                            include ../modules/section-career
+                        when 'portfolio'
+                            include ../modules/section-portfolio
+        include ../modules/footer
+        script(src="js/jquery-3.4.1.min.js")
+        script(src="js/script.js")
+block content
+
