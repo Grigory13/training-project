@@ -1,0 +1,40 @@
+.menu
+	@include flex(1, 0, 0, flex-end, none, none) 
+	width: 220px
+
+.list-menu
+	@include flex(0, 1, 1, none, flex-end, column) 
+	list-style: none  
+	margin: 0 
+	padding: 0
+
+.list-menu__item 
+	padding: 10px 30px 12px 0 
+	max-width: 210px 
+	&:first-child 
+		margin-top: 5px
+
+.item-active 
+	padding: 10px 24px 12px 0 
+	border-right: 6px solid #32c8e9
+
+.list-menu__link
+	@include text(18px, 400) 
+	text-decoration: none 
+	color: #414141  
+	padding-left: 26px 
+	word-wrap: break-word 
+	&:hover 
+		color: #33c1e3
+
+.link-active 
+	color: #33c1e3
+
+@each $name in about, career, portfolio
+	.list-menu__link_icon-#{$name}
+		background: url(../img/#{$name}.png) 0 center no-repeat
+		&:hover
+			background: url(../img/#{$name}-hover.png) 0 center no-repeat
+	.icon-#{$name}_active
+		background: url(../img/#{$name}-hover.png) 0 center no-repeat
+

@@ -9,8 +9,8 @@ var gulp        = require('gulp'),
 
 gulp.task('sass', function(){
     return gulp.src('app/sass/*.sass')
-        .pipe(sass())
-        .pipe(gulp.dest('app/style'))
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(gulp.dest('app/styles'))
         .pipe(browserSync.reload({stream: true})) 
 });
 
@@ -21,9 +21,7 @@ gulp.task('scripts', function() {
  
 gulp.task('pug', function() {
     return gulp.src('app/pug/pages/*.pug')
-    .pipe(pug({
-        pretty: true
-    }))
+    .pipe(pug())
     .pipe(gulp.dest('app'))
     .pipe(browserSync.reload({ stream: true }))
 });
@@ -54,7 +52,7 @@ gulp.task('img', function() {
 
 gulp.task('prebuild', async function(){
 
-    var buildCss = gulp.src('app/style/*.css')
+    var buildCss = gulp.src('app/styles/*.css')
     .pipe(gulp.dest('dist/styles'));
 
     var buildFonts = gulp.src('app/fonts/**/*')

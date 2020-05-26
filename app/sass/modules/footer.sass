@@ -1,0 +1,53 @@
+.footer 
+	background-color: #414141
+
+.footer-wrapper
+	@include flex(1, 1, 0, space-between, center, none) 
+	min-height: 50px 
+
+.copyright 
+	@include text(14px, 300) 
+	color: #9c9c9c 
+	max-width: 350px 
+	word-wrap: break-word
+
+.social-network 
+	display: flex
+
+.facebook 
+	background-image: url(../img/sprite.png) 
+	background-position: -31px 0px 
+	width: 31px 
+	height: 30px 
+	display: block 
+	margin-right: 7px 
+	&:hover 
+		background-image: url(../img/sprite.png) 
+		background-position: 0px 0px 
+		width: 31px 
+		height: 30px
+
+.vk 
+	background-image: url(../img/sprite.png) 
+	background-position: -62px -30px 
+	width: 31px 
+	height: 30px 
+	display: block 
+	margin-right: 7px 
+	&:hover 
+		background-image: url(../img/sprite.png) 
+		background-position: -62px 0px 
+		width: 31px 
+		height: 30px
+         
+.twitter 
+	background-image: url(../img/sprite.png) 
+	background-position: -31px -30px 
+	width: 31px 
+	height: 30px 
+	display: block 
+	&:hover 
+		background-image: url(../img/sprite.png) 
+		background-position: 0px -30px 
+		width: 31px 
+		height: 30px 

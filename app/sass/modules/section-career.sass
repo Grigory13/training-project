@@ -1,0 +1,148 @@
+.career
+	@include flex(0, 0, 1, none, none, column)  
+	flex-basis: 700px 
+	max-width: 700px
+
+.career-wrapper
+	@include flex(1, 0, 1, space-between, none, wrap)  
+	margin-top: 25px
+
+.background-block 
+	position: relative 
+	width: 220px 
+	height: 220px 
+	background-color: #f6f6f6 
+	border-radius: 6px 
+	overflow: hidden
+
+.img-petersburg 
+	display: none 
+	position: absolute 
+	left: -92px 
+	top: -5px
+
+.img-work 
+	display: none 
+	width: 220px 
+	position: absolute
+
+.img-university 
+	display: none 
+	height: 220px 
+	position: absolute
+
+.list-professions 
+	position: relative
+
+.bar 
+	position: absolute 
+	width: 2px 
+	height: 100% 
+	background-color: #dddddd 
+	left: -21px 
+	z-index: 1
+
+.professions 
+	position: relative 
+	width: 381px 
+	margin-bottom: 20px 
+	z-index: 3 
+	&:last-child 
+		margin-bottom: 0 
+		& > .year 
+			&:after 
+				background-color: #f6f6f6 
+				height: 100% 
+				width: 4px 
+				top: 0 
+				left: 40px 
+				z-index: 2 
+	&:nth-child(2) 
+		& > .year 
+			&:after 
+				background-color: #f6f6f6 
+				height: 100% 
+				width: 4px 
+				top: -100% 
+				left: 40px 
+				z-index: 2
+
+.year
+	@include text(14px, 300) 
+	position: absolute 
+	display: inline-block 
+	top: 50% 
+	left: -62px 
+	height: 50% 
+	max-width: 30px 
+	word-wrap: break-word 
+	span 
+		max-width: 100% 
+	&:after 
+		position: absolute 
+		content: "" 
+	&:before 
+		position: absolute 
+		content: "" 
+		width: 10px 
+		height: 10px 
+		border-radius: 50% 
+		background-color: #33c1e3 
+		left: 37px 
+		box-shadow: 0 0 0 5px #f6f6f6 
+		z-index: 3
+
+.button-career 
+	cursor: pointer 
+	width: 381px 
+	padding: 17px 20px 18px 20px 
+	background-color: white 
+	border-radius: 8px 
+	text-align: left 
+	border-top: 1px solid #f1f1f1 
+	border-bottom: 1px solid #d5d5d5 
+	border-right: 1px solid #e6e6e6 
+	border-left: 1px solid #e6e6e6 
+	box-shadow: -1px 0 0 #f1f1f1, 1px 0 0 #f1f1f1, 0 1px 0 #e6e6e6, 0 2px 0 #f1f1f1 
+	&:focus 
+		outline: none 
+	&:hover 
+		color: white 
+		background-color: #33c1e3 
+		outline: none 
+		& + .year
+			@include text(14px, 700) 
+			color: #33c1e3 
+			&:before 
+				background-color: #33c1e3 
+				box-shadow: 0 0 0 5px #94dff2 
+		& > .post 
+			color: white 
+		& > .date-work 
+			color: white
+
+.place 
+	font-size: 20px 
+	font-family: 'DejaVu Sans' 
+	margin: 0 0 4px 0 
+	letter-spacing: -1px 
+	word-wrap: break-word 
+	max-width: 100%
+
+.post
+	@include text(18px, 300) 
+	margin: 0 0 7px 
+	max-width: 100%  
+	line-height: 21px 
+	color: #aaaaaa 
+	font-family: 'Fira Sans' 
+	word-wrap: break-word
+
+.date-work
+	@include text(18px, 300) 
+	margin: 0 
+	max-width: 100% 
+	line-height: 100% 
+	color: #aaaaaa 
+	font-family: 'Fira Sans' 
+	word-wrap: break-word 

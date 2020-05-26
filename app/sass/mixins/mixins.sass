@@ -1,0 +1,12 @@
+@mixin text($size, $weight)
+	font-size: $size
+	font-weight: $weight
+
+@mixin flex ($bool1, $bool2, $bool3, $justify, $align, $flow)
+	display: flex
+	@if $bool1 == 1
+		justify-content: $justify
+	@if $bool2 == 1
+		align-items: $align
+	@if $bool3 == 1
+		flex-flow: $flow
